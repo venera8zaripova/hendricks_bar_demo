@@ -1,0 +1,320 @@
+/* GOOGLE FONTS */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;600&display=swap');
+
+/* WEB FONTS */
+@font-face {
+    font-family: 'poppinsregular';
+    src: url(./fonts/poppins-regular-webfont.woff2) format('woff2'),
+         url(./fonts/poppins-light-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    /* outline: 2px solid red; */
+}
+
+html{
+    font-family: "poppinsregular";
+}
+
+body {
+    margin: 0px;
+}
+
+
+/* BIG CONTAINER */
+.big_container {
+    width: 100%;
+    margin: auto;
+}
+
+/* ROW */
+.row{
+    margin:auto;
+    max-width: 1860px;
+    position:relative;
+  }
+
+/* CLEARFIX */
+.row::after{
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+/* COLUMN SPAN MODULES */
+.col_4 {
+    width: 33.33%;
+    float:left; 
+    position:relative;
+}
+
+.col_6 {
+    width: 50%;
+    float:left;
+    position:relative;
+    margin:auto;
+}
+
+.col_8{
+    width:66.67%;
+    float:left;
+    position:relative;
+}
+
+.col_12{
+    width: 100%;
+    float:left;  
+    position:relative;
+}
+
+
+/* HEADER */
+.logo{
+    margin-top: 60px;
+    padding-left: 3px;
+    padding-bottom: 40px;
+    font-family: 'Lora', serif;
+ }
+
+
+ /* NAVIGATION */
+.menu {
+    margin-top: 55px;
+    font-size: 18px;
+}
+
+ul {
+    float:right;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+    margin-right: 150px;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #121212;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+}
+
+
+.menu a:hover {
+    font-weight: 700;
+}
+
+/* li a:hover:not(.active) {
+    font-weight:400;
+} */
+
+.active {
+    text-decoration: underline;
+}
+
+
+ /* RESERVATIONS CTA BUTTON */
+
+button {
+    background-color: white;
+    color: rgb(168,166,160);
+    border: 2px solid rgb(168,166,160);
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+    padding: 20px 32px;
+    /* margin-left: 435px; */
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+}
+
+
+.cta_button {
+    margin-top: 45px;
+    float: right;
+}
+
+.cta_button:hover {
+    background-color: rgb(168,166,160);
+    color: white;
+    transition: .5s;
+}
+
+
+/* .logo > img {
+    width:150px;
+    height:auto;
+} */
+
+
+ /* HERO IMAGE */
+.hero {
+    background-image: url(./images/hendricks_bar_interiors.jpg);
+    background-repeat: no-repeat;
+    min-height: 900px;
+    background-size: cover;
+}
+
+
+/* CENTER TEXT */
+.center_text{
+    text-align:center;
+    padding: 180px 10%;
+    font-size: 36px;
+    margin: auto 0;
+    display: block;
+    font-family: 'Lora', serif;
+}
+
+
+
+/* MENU-SECTION */
+.menu_thumb img {
+    width: 700px;
+    padding-top: 50px;
+}
+
+.menu_link_button {
+    font-size: 67px;
+    padding-top: 50px;
+    font-family: 'Lora', serif;
+}
+
+.menu_link_button a {
+    margin-left: 658px;
+    color: rgb(168,166,160);
+}
+
+.menu_link_button a:hover {
+    color: rgb(144, 143, 137);
+    transition: .3s;
+}
+
+
+/* CONTACT-SECTION */
+.contact_thumb {
+    padding-bottom: 100px;
+}
+
+.contact_link_button {
+    font-size: 67px;
+    padding-top: 150px;
+    font-family: 'Lora', serif;
+}
+
+.contact_link_button a {
+    color: rgb(168,166,160);
+}
+
+.contact_link_button a:hover {
+    color: rgb(144, 143, 137);
+    transition: .3s;
+}
+
+.contact_thumb img {
+    width: 456px;
+    height: 608px;
+    margin-left: 475px;
+}
+
+
+
+/* FOOTER IMAGE */
+.fullWidth {
+    background-image: url(./images/footer_cocktail.jpg);
+    background-repeat: no-repeat;
+    height: 600px;
+    width: 100%;
+    background-size: cover;
+}
+
+
+/* FOOTER */
+footer {
+    /* min-height: 30vh; */
+    height: 330px;
+    width: 100%;
+    background-color: #38383b;
+    color: #FFFFFF;
+}
+
+footer a {
+    color: rgb(168,166,160);
+}
+
+.left_part {
+    top: 20px;
+}
+
+
+.left_part h2 {
+    position: relative;
+    margin-left: 40px;
+    top: 50px;
+    font-family: 'Lora', serif;
+}
+
+.left_part a {
+    position: relative;
+    margin-left: 40px;
+    top: 140px;
+
+}
+
+.middle_part {
+    top: 20px;
+}
+
+.middle_part p {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.right_part {
+    top: 20px;
+}
+
+
+.right_part #menuLink {
+    position: relative;
+    margin-right: 40px;
+    top: 40px;
+    float: right;
+}
+
+.right_part #reservationsLink {
+    position: relative;
+    margin-right: 40px;
+    top: 100px;
+    float: right;
+}
+
+.icon {
+    position: relative;
+    background-color: transparent;
+    color:  rgb(168,166,160);
+    border: none;
+    height: 20px;
+    width: 20px;
+    padding: 0px;
+    float: right;
+    margin-top: 160px;
+    margin-right: 20px;
+    right: 25px;
+    font-size: 26px;
+}
+
+.icon:hover{
+    color: white;
+}
