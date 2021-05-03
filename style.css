@@ -331,83 +331,26 @@ RESPONSIVE
 
 @media only screen and (max-width: 1024px) {  /* some horizontal tablets */
 
-    .hero{
-        background: blue; 
-    }
+    
 
 }
 
 
 @media only screen and (max-width: 960px) {  /* small deskop resolution */
 
-    .hero{
-        background: fuchsia; 
-    }
+    
     
 }
 
 @media only screen and (max-width: 768px) {  /* tablet */
 
-    .hero{
-        background: yellow; 
-    }    
+   
 
 }
 
 @media only screen and (max-width: 530px) { /* desktop */
 
-    .myContainer {
-        width: 100%;
+    
 
-    }
-    
-    .fixedNav{
-      position:relative;
-      flex-direction: column;
-    }
-    
-    .fixedNav > div{
-        flex-grow:1;
-        text-align: center;
-        border-bottom: 1px solid white;
-        padding:5px 0px;
-    }
 
-    .hero{
-        background: lime; 
-        margin-top:0px;
-    }
-    
-    .three-column{
-        display:flex;
-        flex-direction:column;
-        
-    }
-    
-    .three-column > div{
-        width:100%;
-        margin-bottom:2px;
-    }
-    
-    .sideNav{
-        display:flex;
-        flex-direction: row;
-        justify-content: space-between;
-        width: 100%;
-        margin:0px;
-    }
-    
-    .sideNav > div{
-        padding:10px 0px;
-        align-self: center;
-        
-    }
-    
-    .sideImg{
-        margin:0px;
-        min-height:200px;
-        width:100%;
-        
-    }
-    
 }
