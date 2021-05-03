@@ -33,80 +33,74 @@ body {
 }
 
 /* ROW */
-.row{
-    margin:auto;
-    max-width: 1860px;
-    position:relative;
-  }
 
-/* CLEARFIX */
-.row::after{
-    content: "";
-    clear: both;
-    display: table;
-  }
+.row{
+    display:flex;
+    justify-content: space-evenly;
+}
 
 /* COLUMN SPAN MODULES */
 .col_4 {
     width: 33.33%;
-    float:left; 
-    position:relative;
+    display: flex;
+    justify-content: center;
 }
 
 .col_6 {
     width: 50%;
-    float:left;
-    position:relative;
-    margin:auto;
+    display: flex;
+    justify-content: center;
 }
 
 .col_8{
     width:66.67%;
-    float:left;
-    position:relative;
+    display: flex;
+    justify-content: center;
 }
 
 .col_12{
     width: 100%;
-    float:left;  
-    position:relative;
+    display: flex;
+    justify-content: center;
 }
 
 
-/* HEADER */
+/* WRAPPERS */
+
+.wrapper-vertical {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+}
+
+.wrapper-horizontal {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
 .logo{
-    margin-top: 60px;
-    padding-left: 3px;
-    padding-bottom: 40px;
+    margin: 60px 80px 40px 0px;
     font-family: 'Lora', serif;
  }
 
 
  /* NAVIGATION */
-.menu {
-    margin-top: 55px;
-    font-size: 18px;
-}
 
 ul {
-    float:right;
+    display: flex;
     list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: white;
-    margin-right: 150px;
-}
-
-li {
-    float: left;
+    margin-top: 60px;
+    padding:0px;
 }
 
 li a {
-    display: block;
+    font-size: 18px;
     color: #121212;
     text-align: center;
-    padding: 14px 20px;
+    padding: 15px;
     text-decoration: none;
 }
 
@@ -114,10 +108,6 @@ li a {
 .menu a:hover {
     font-weight: 700;
 }
-
-/* li a:hover:not(.active) {
-    font-weight:400;
-} */
 
 .active {
     text-decoration: underline;
@@ -132,18 +122,13 @@ button {
     border: 2px solid rgb(168,166,160);
     font-size: 15px;
     font-family: 'Poppins', sans-serif;
-    padding: 20px 32px;
-    /* margin-left: 435px; */
+    padding: 5px 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     text-decoration: none;
     cursor: pointer;
-    display: inline-block;
 }
 
-
-.cta_button {
-    margin-top: 45px;
-    float: right;
-}
 
 .cta_button:hover {
     background-color: rgb(168,166,160);
@@ -152,17 +137,12 @@ button {
 }
 
 
-/* .logo > img {
-    width:150px;
-    height:auto;
-} */
-
-
  /* HERO IMAGE */
 .hero {
     background-image: url(./images/hendricks_bar_interiors.jpg);
     background-repeat: no-repeat;
     min-height: 900px;
+    max-width: 80%;
     background-size: cover;
 }
 
@@ -170,10 +150,9 @@ button {
 /* CENTER TEXT */
 .center_text{
     text-align:center;
+    max-width: 70%;
     padding: 180px 10%;
     font-size: 36px;
-    margin: auto 0;
-    display: block;
     font-family: 'Lora', serif;
 }
 
@@ -181,19 +160,21 @@ button {
 
 /* MENU-SECTION */
 .menu_thumb img {
-    width: 700px;
+    width: 800px;
     padding-top: 50px;
+    margin-right: 150px;
 }
 
 .menu_link_button {
     font-size: 67px;
-    padding-top: 50px;
+    padding-top: 150px;
     font-family: 'Lora', serif;
 }
 
 .menu_link_button a {
-    margin-left: 658px;
     color: rgb(168,166,160);
+    margin-left: 258px;
+
 }
 
 .menu_link_button a:hover {
@@ -209,12 +190,13 @@ button {
 
 .contact_link_button {
     font-size: 67px;
-    padding-top: 150px;
+    margin-top: 250px;
     font-family: 'Lora', serif;
 }
 
 .contact_link_button a {
     color: rgb(168,166,160);
+    margin-right: 458px;
 }
 
 .contact_link_button a:hover {
@@ -223,9 +205,9 @@ button {
 }
 
 .contact_thumb img {
-    width: 456px;
-    height: 608px;
-    margin-left: 475px;
+    width: 500px;
+    margin-top: 150px;
+    margin-left: 158px;
 }
 
 
@@ -242,7 +224,6 @@ button {
 
 /* FOOTER */
 footer {
-    /* min-height: 30vh; */
     height: 330px;
     width: 100%;
     background-color: #38383b;
@@ -253,65 +234,15 @@ footer a {
     color: rgb(168,166,160);
 }
 
-.left_part {
-    top: 20px;
-}
-
-
-.left_part h2 {
-    position: relative;
-    margin-left: 40px;
-    top: 50px;
-    font-family: 'Lora', serif;
-}
-
-.left_part a {
-    position: relative;
-    margin-left: 40px;
-    top: 140px;
-
-}
-
-.middle_part {
-    top: 20px;
-}
-
-.middle_part p {
-    text-align: center;
-    margin-top: 50px;
-}
-
-.right_part {
-    top: 20px;
-}
-
-
-.right_part #menuLink {
-    position: relative;
-    margin-right: 40px;
-    top: 40px;
-    float: right;
-}
-
-.right_part #reservationsLink {
-    position: relative;
-    margin-right: 40px;
-    top: 100px;
-    float: right;
-}
-
 .icon {
-    position: relative;
     background-color: transparent;
     color:  rgb(168,166,160);
     border: none;
     height: 20px;
     width: 20px;
     padding: 0px;
-    float: right;
-    margin-top: 160px;
+    margin-top: 150px;
     margin-right: 20px;
-    right: 25px;
     font-size: 26px;
 }
 
@@ -321,36 +252,204 @@ footer a {
 
 
 
+/* RESPONSIVE DESIGN */
+
+@media only screen and (max-width: 1024px) {  
+    /* some horizontal tablets */
+
+    /* html {
+        background: fuchsia;
+    }
+} */
 
 
-/*   //////
+@media only screen and (max-width: 960px) {  
+    /* small deskop resolution */
 
-RESPONSIVE
-
-*/
-
-@media only screen and (max-width: 1024px) {  /* some horizontal tablets */
-
+    /* html {
+        background: aqua;
+    } */
     
+
 
 }
 
-
-@media only screen and (max-width: 960px) {  /* small deskop resolution */
-
+@media only screen and (max-width: 768px) {  
+    /* tablet */
+    /* html {
+        background: lime;
+    } */
     
+    .col-2 {
+        display:none;
+    }
     
+    .col-10{
+        width:100%;
+        background: aquamarine;
+    }
 }
 
-@media only screen and (max-width: 768px) {  /* tablet */
 
-   
+@media only screen and (max-width: 580px) { 
+    /* mobile */
 
-}
+    .big_container {
+        width: 100%;
+        margin: 0 auto;
+    }
 
-@media only screen and (max-width: 530px) { /* desktop */
 
+    .col_4, .col_6, .col_12 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    /* .row {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-content: stretch;
+      } */
+
+    .row {
+        display:flex;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+
+    /* LOGO */
+    .logo{
+        position:relative;
+        margin: 20px 0px 10px 100px;
+        font-family: 'Lora', serif;
+     }
+
+     .logo h1 {
+         font-size: 40px;
+         text-align: center;
+     }
+
+
+    /* TOP-NAVIGATION */
+
+    ul {
+        display: flex;
+        justify-content: center;
+        list-style-type: none;
+        margin-top: 60px;
+        padding:0px;
+    }
+    
+    li a {
+        font-size: 18px;
+        color: #121212;
+        text-align: center;
+        text-decoration: none;
+    }
+    
+    
+    
+     /* RESERVATIONS CTA BUTTON */
+    
+    button {
+        background-color: white;
+        color: rgb(168,166,160);
+        border: 2px solid rgb(168,166,160);
+        font-size: 15px;
+        font-family: 'Poppins', sans-serif;
+        /* padding: 5px; */
+        /* margin-top: 30px;
+        margin-bottom: 30px; */
+        text-decoration: none;
+        cursor: pointer;
+    }
     
 
 
+    /* HERO IMAGE */
+    .hero {
+        background-image: url(./images/hendricks_bar_interiors.jpg);
+        background-repeat: no-repeat;
+        min-height: 300px;
+        max-width: 100%;
+        background-size: cover;
+    }
+
+
+    /* CENTER TEXT */
+    .center_text{
+        text-align:center;
+        max-width: 100%;
+        padding: 70px 10%;
+        font-size: 21px;
+        font-family: 'Lora', serif;
+    }
+    
+
+
+    /* MENU-SECTION */
+    .menu_thumb img {
+        width: 500px;
+        min-height: 450px;
+        padding-top: 0px;
+        margin-right: 150px;
+    }
+    
+    .menu_link_button {
+        font-size: 37px;
+        padding-top: 60px;
+        font-family: 'Lora', serif;
+    }
+    
+
+    
+    /* CONTACT-SECTION */
+    .contact_thumb {
+        padding-bottom: 0px;
+    }
+    
+    .contact_link_button {
+        font-size: 47px;
+        padding-left: 90px;
+        font-family: 'Lora', serif;
+    }
+    
+    .contact_thumb img {
+        width: 500px;
+        margin: 0px;
+        margin-top: 100px;
+        margin-bottom: 0px;
+    }
+    
+    
+    
+    /* FOOTER IMAGE */
+    .fullWidth {
+        display: none;
+    }
+    
+    /* FOOTER */
+    footer {
+        min-height: 230px;
+        background-color: #38383b;
+        color: #FFFFFF;
+    }
+
+    .icon {
+        background-color: transparent;
+        color:  rgb(168,166,160);
+        border: none;
+        height: 20px;
+        width: 20px;
+        padding: 0px;
+        margin-top: 150px;
+        margin-right: 20px;
+        font-size: 26px;
+    }
+    
 }
